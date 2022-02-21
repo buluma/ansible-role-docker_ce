@@ -4,7 +4,7 @@ Install and configure Docker CE on your system.
 
 |GitHub|GitLab|Quality|Downloads|Version|
 |------|------|-------|---------|-------|
-|[![github](https://github.com/buluma/ansible-role-docker_ce/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-docker_ce/actions)|[![gitlab](https://gitlab.com/buluma/ansible-role-docker_ce/badges/main/pipeline.svg)](https://gitlab.com/buluma/ansible-role-docker_ce)|[![quality](https://img.shields.io/ansible/quality/)](https://galaxy.ansible.com/buluma/docker_ce)|[![downloads](https://img.shields.io/ansible/role/d/)](https://galaxy.ansible.com/buluma/docker_ce)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-docker_ce.svg)](https://github.com/buluma/ansible-role-docker_ce/releases/)|
+|[![github](https://github.com/buluma/ansible-role-docker_ce/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-docker_ce/actions)|[![gitlab](https://gitlab.com/buluma/ansible-role-docker_ce/badges/master/pipeline.svg)](https://gitlab.com/buluma/ansible-role-docker_ce/-/commits/master)|[![quality](https://img.shields.io/ansible/quality/58158)](https://galaxy.ansible.com/buluma/docker_ce)|[![downloads](https://img.shields.io/ansible/role/d/58158)](https://galaxy.ansible.com/buluma/docker_ce)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-docker_ce.svg)](https://github.com/buluma/ansible-role-docker_ce/releases/)|
 
 ## [Example Playbook](#example-playbook)
 
