@@ -1,0 +1,30 @@
+---
+- name: Converge
+  hosts: all
+  become: yes
+  gather_facts: no
+
+  tasks:
+    - name: Check docker group configuration
+      ansible.builtin.lineinfile:
+        path: /etc/group
+        regex: '^docker:x:\d*:woody,buzz$'
+        state: absent
+      check_mode: yes
+      register: docker_ce_group
+      changed_when: not docker_ce_group is changed
+      failed_when: docker_ce_group is changed
+
+    - name: install pip docker-py
+      ansible.builtin.pip:
+        name: docker-py
+        state: present
+
+    - name: Create a container
+      docker_container:
+        name: openssh
+        image: robertdebock/docker-centos-openssh   # TODO Build own
+        ports:
+          - "2222:22"
+      when:
+        - ansible_connection not in [ "container", "docker", "community.docker.docker" ]
