@@ -5,4 +5,4 @@
 repository:
   description: Install and configure Docker CE on your system.
   homepage: https://buluma.github.io/
-  topics: dockerce, docker, ansible, molecule, tox, playbook, hacktoberfest
+  topics: dockerce, docker, ansible, molecule, tox, playbook
