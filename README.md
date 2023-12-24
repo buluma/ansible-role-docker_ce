@@ -1,10 +1,10 @@
-# [Ansible role docker_ce](#docker_ce)
+# Ansible role [docker_ce](https://galaxy.ansible.com/ui/standalone/roles/buluma/docker_ce/documentation)
 
 Install and configure Docker CE on your system.
 
-|GitHub|Version|Issues|Pull Requests|
-|------|-------|------|-------------|
-|[![github](https://github.com/buluma/ansible-role-docker_ce/actions/workflows/molecule.yml/badge.svg)](https://github.com/buluma/ansible-role-docker_ce/actions/workflows/molecule.yml)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-docker_ce.svg)](https://github.com/buluma/ansible-role-docker_ce/releases/)|[![Issues](https://img.shields.io/github/issues/buluma/ansible-role-docker_ce.svg)](https://github.com/buluma/ansible-role-docker_ce/issues/)|[![PullRequests](https://img.shields.io/github/issues-pr-closed-raw/buluma/ansible-role-docker_ce.svg)](https://github.com/buluma/ansible-role-docker_ce/pulls/)|
+|GitHub|Version|Issues|Pull Requests|Downloads|
+|------|-------|------|-------------|---------|
+|[![github](https://github.com/buluma/ansible-role-docker_ce/actions/workflows/molecule.yml/badge.svg)](https://github.com/buluma/ansible-role-docker_ce/actions/workflows/molecule.yml)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-docker_ce.svg)](https://github.com/buluma/ansible-role-docker_ce/releases/)|[![Issues](https://img.shields.io/github/issues/buluma/ansible-role-docker_ce.svg)](https://github.com/buluma/ansible-role-docker_ce/issues/)|[![PullRequests](https://img.shields.io/github/issues-pr-closed-raw/buluma/ansible-role-docker_ce.svg)](https://github.com/buluma/ansible-role-docker_ce/pulls/)|[![Ansible Role](https://img.shields.io/ansible/role/d/buluma/docker_ce)](https://galaxy.ansible.com/ui/standalone/roles/buluma/docker_ce/documentation)|
 
 ## [Example Playbook](#example-playbook)
 
@@ -121,9 +121,7 @@ If you find issues, please register them in [GitHub](https://github.com/buluma/a
 
 ## [Author Information](#author-information)
 
-[buluma](https://buluma.github.io/)
+[Shadow Walker](https://buluma.github.io/)
 
-
-### [Special Thanks](#special-thanks)
 
 Template inspired by [Robert de Bock](https://github.com/robertdebock)
