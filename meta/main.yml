@@ -21,7 +21,9 @@ galaxy_info:
         - "38"
     - name: Ubuntu
       versions:
-        - all
+        - jammy
+        - focal
+        - bionic
 
   galaxy_tags:
     - dockerce

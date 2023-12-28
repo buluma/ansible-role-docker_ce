@@ -27,7 +27,7 @@ molecule:
       - image: "docker-ubuntu-systemd"
         tag: "focal"
       - image: "docker-ubuntu-systemd"
-        tag: "lunar"
+        tag: "bionic"
 
 galaxy:
   script:
