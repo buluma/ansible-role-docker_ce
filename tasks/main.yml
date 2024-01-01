@@ -11,13 +11,14 @@
     - ansible_pkg_mgr == "apt"
   block:
     - name: Install apt key
-      ansible.builtin.apt_key:
+      ansible.builtin.get_url:
         url: "{{ docker_ce_apt_key_url }}"
-        state: present
+        dest: "{{ docker_ce_apt_key_file }}"
 
     - name: Install docker_ce repository for apt
       ansible.builtin.apt_repository:
         repo: "{{ docker_ce_apt_repository_repo }}"
+        filename: "{{ docker_ce_apt_repository_repo_file }}"
         state: present
       notify:
         - Apt update cache
