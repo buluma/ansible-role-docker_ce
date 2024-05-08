@@ -1,8 +1,8 @@
 # Changelog
 
-## [Unreleased](https://github.com/buluma/ansible-role-docker_ce/tree/HEAD)
+## [24.3.31](https://github.com/buluma/ansible-role-docker_ce/tree/24.3.31) (2024-03-26)
 
-[Full Changelog](https://github.com/buluma/ansible-role-docker_ce/compare/1.1.0...HEAD)
+[Full Changelog](https://github.com/buluma/ansible-role-docker_ce/compare/1.1.0...24.3.31)
 
 **Merged pull requests:**
 
