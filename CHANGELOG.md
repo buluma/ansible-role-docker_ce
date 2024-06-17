@@ -1,5 +1,13 @@
 # Changelog
 
+## [Unreleased](https://github.com/buluma/ansible-role-docker_ce/tree/HEAD)
+
+[Full Changelog](https://github.com/buluma/ansible-role-docker_ce/compare/24.3.31...HEAD)
+
+**Merged pull requests:**
+
+- Bump buluma/molecule-action from 24.2.0 to 24.6.17 [\#35](https://github.com/buluma/ansible-role-docker_ce/pull/35) ([dependabot[bot]](https://github.com/apps/dependabot))
+
 ## [24.3.31](https://github.com/buluma/ansible-role-docker_ce/tree/24.3.31) (2024-03-26)
 
 [Full Changelog](https://github.com/buluma/ansible-role-docker_ce/compare/1.1.0...24.3.31)
