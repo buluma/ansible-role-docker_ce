@@ -13,17 +13,19 @@ galaxy_info:
         - bullseye
     - name: EL
       versions:
-        - "8"
         - "9"
     - name: Fedora
       versions:
         - "39"
         - "38"
+        - "40"
     - name: Ubuntu
       versions:
         - jammy
         - focal
         - bionic
+        - noble
+        - lunar
 
   galaxy_tags:
     - dockerce
