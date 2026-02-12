@@ -1,34 +1,24 @@
----
 galaxy_info:
   author: buluma
   role_name: docker_ce
   description: Install and configure Docker CE on your system.
   license: Apache-2.0
   company: ShadowNet
-  min_ansible_version: "2.12"
-
+  min_ansible_version: '2.12'
   platforms:
-    - name: Debian
-      versions:
-        - bullseye
-    - name: EL
-      versions:
-        - "9"
-    - name: Fedora
-      versions:
-        - "39"
-        - "38"
-        - "40"
-    - name: Ubuntu
-      versions:
-        - jammy
-        - focal
-        - bionic
-        - noble
-        - lunar
-
+  - name: Debian
+    versions:
+    - all
+  - name: EL
+    versions:
+    - all
+  - name: Fedora
+    versions:
+    - all
+  - name: Ubuntu
+    versions:
+    - all
   galaxy_tags:
-    - dockerce
-    - docker
-
+  - dockerce
+  - docker
 dependencies: []
