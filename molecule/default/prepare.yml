@@ -1,22 +1,19 @@
----
-- name: Prepare
-  hosts: all
+- become: true
   gather_facts: false
-  become: true
-
+  hosts: all
+  name: Prepare
   roles:
-    - role: buluma.bootstrap
-    - role: buluma.epel
-    - role: buluma.buildtools
-    - role: buluma.python_pip
-    - role: buluma.core_dependencies
-
+  - role: buluma.bootstrap
+  - role: buluma.epel
+  - role: buluma.buildtools
+  - role: buluma.python_pip
+  - role: buluma.core_dependencies
   tasks:
-    - name: Create test case users
-      ansible.builtin.user:
-        name: "{{ user }}"
-      loop:
-        - woody
-        - buzz
-      loop_control:
-        loop_var: user
+  - ansible.builtin.user:
+      name: '{{ user }}'
+    loop:
+    - woody
+    - buzz
+    loop_control:
+      loop_var: user
+    name: Create test case users

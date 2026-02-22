@@ -11,44 +11,39 @@ Install and configure Docker CE on your system.
 This example is taken from [`molecule/default/converge.yml`](https://github.com/buluma/ansible-role-docker_ce/blob/master/molecule/default/converge.yml) and is tested on each push, pull request and release.
 
 ```yaml
----
-- name: Converge
-  hosts: all
-  become: true
+- become: true
   gather_facts: true
-
+  hosts: all
+  name: Converge
   roles:
-    - role: buluma.docker_ce
-      docker_ce_privileged_users:
-        - woody
-        - buzz
+  - docker_ce_privileged_users:
+    - woody
+    - buzz
+    role: buluma.docker_ce
 ```
 
 The machine needs to be prepared. In CI this is done using [`molecule/default/prepare.yml`](https://github.com/buluma/ansible-role-docker_ce/blob/master/molecule/default/prepare.yml):
 
 ```yaml
----
-- name: Prepare
-  hosts: all
+- become: true
   gather_facts: false
-  become: true
-
+  hosts: all
+  name: Prepare
   roles:
-    - role: buluma.bootstrap
-    - role: buluma.epel
-    - role: buluma.buildtools
-    - role: buluma.python_pip
-    - role: buluma.core_dependencies
-
+  - role: buluma.bootstrap
+  - role: buluma.epel
+  - role: buluma.buildtools
+  - role: buluma.python_pip
+  - role: buluma.core_dependencies
   tasks:
-    - name: Create test case users
-      ansible.builtin.user:
-        name: "{{ user }}"
-      loop:
-        - woody
-        - buzz
-      loop_control:
-        loop_var: user
+  - ansible.builtin.user:
+      name: '{{ user }}'
+    loop:
+    - woody
+    - buzz
+    loop_control:
+      loop_var: user
+    name: Create test case users
 ```
 
 Also see a [full explanation and example](https://buluma.github.io/how-to-use-these-roles.html) on how to use these roles.
@@ -58,13 +53,6 @@ Also see a [full explanation and example](https://buluma.github.io/how-to-use-th
 The default values for the variables are set in [`defaults/main.yml`](https://github.com/buluma/ansible-role-docker_ce/blob/master/defaults/main.yml):
 
 ```yaml
----
-# defaults file for docker_ce
-
-# Add users to the privileged docker group. For example:
-# docker_ce_privileged_users:
-#  - UserA
-#  - UserB
 docker_ce_privileged_users: []
 ```
 
