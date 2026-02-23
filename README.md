@@ -12,40 +12,40 @@ This example is taken from [`molecule/default/converge.yml`](https://github.com/
 
 ```yaml
 ---
-  - become: true
-    gather_facts: true
-    hosts: all
-    name: Converge
-    roles:
-      - docker_ce_privileged_users:
-          - woody
-          - buzz
-        role: buluma.docker_ce
+- become: true
+  gather_facts: true
+  hosts: all
+  name: Converge
+  roles:
+  - docker_ce_privileged_users:
+    - woody
+    - buzz
+    role: buluma.docker_ce
 ```
 
 The machine needs to be prepared. In CI this is done using [`molecule/default/prepare.yml`](https://github.com/buluma/ansible-role-docker_ce/blob/master/molecule/default/prepare.yml):
 
 ```yaml
 ---
-  - become: true
-    gather_facts: false
-    hosts: all
-    name: Prepare
-    roles:
-      - role: buluma.bootstrap
-      - role: buluma.epel
-      - role: buluma.buildtools
-      - role: buluma.python_pip
-      - role: buluma.core_dependencies
-    tasks:
-      - ansible.builtin.user:
-          name: '{{ user }}'
-        loop:
-          - woody
-          - buzz
-        loop_control:
-          loop_var: user
-        name: Create test case users
+- become: true
+  gather_facts: false
+  hosts: all
+  name: Prepare
+  roles:
+  - role: buluma.bootstrap
+  - role: buluma.epel
+  - role: buluma.buildtools
+  - role: buluma.python_pip
+  - role: buluma.core_dependencies
+  tasks:
+  - ansible.builtin.user:
+      name: '{{ user }}'
+    loop:
+    - woody
+    - buzz
+    loop_control:
+      loop_var: user
+    name: Create test case users
 ```
 
 Also see a [full explanation and example](https://buluma.github.io/how-to-use-these-roles.html) on how to use these roles.

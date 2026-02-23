@@ -1,28 +1,28 @@
 ---
-  - become: true
-    gather_facts: false
-    hosts: all
-    name: Converge
-    tasks:
-      - ansible.builtin.lineinfile:
-          path: /etc/group
-          regex: ^docker:x:\d*:woody,buzz$
-          state: absent
-        changed_when: not docker_ce_group is changed
-        check_mode: true
-        failed_when: docker_ce_group is changed
-        name: Check docker group configuration
-        register: docker_ce_group
-      - ansible.builtin.pip:
-          name: docker-py
-          state: present
-        name: Install pip docker-py
-      - community.docker.docker_container:
-          image: buluma/docker-centos-openssh
-          name: openssh
-          ports:
-            - '2222:22'
-        name: Create a container
-        when:
-          - ansible_connection not in [ "container", "docker", 
-            "community.docker.docker" ]
+- become: true
+  gather_facts: false
+  hosts: all
+  name: Converge
+  tasks:
+  - ansible.builtin.lineinfile:
+      path: /etc/group
+      regex: ^docker:x:\d*:woody,buzz$
+      state: absent
+    changed_when: not docker_ce_group is changed
+    check_mode: true
+    failed_when: docker_ce_group is changed
+    name: Check docker group configuration
+    register: docker_ce_group
+  - ansible.builtin.pip:
+      name: docker-py
+      state: present
+    name: Install pip docker-py
+  - community.docker.docker_container:
+      image: buluma/docker-centos-openssh
+      name: openssh
+      ports:
+      - '2222:22'
+    name: Create a container
+    when:
+    - ansible_connection not in [ "container", "docker", 
+      "community.docker.docker" ]
