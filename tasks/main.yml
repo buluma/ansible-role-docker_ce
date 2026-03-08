@@ -17,6 +17,7 @@
         state: present
       notify:
         - Apt update cache
+      # Separator for the pre-commit handler parser.
 - name: Install docker_ce repository for dnf/yum
   ansible.builtin.get_url:
     dest: /etc/yum.repos.d/docker_ce.repo
