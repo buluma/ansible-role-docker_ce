@@ -4,7 +4,7 @@
   hosts: all
   name: Converge
   roles:
-  - docker_ce_privileged_users:
-    - woody
-    - buzz
-    role: buluma.docker_ce
+    - docker_ce_privileged_users:
+        - woody
+        - buzz
+      role: buluma.docker_ce
