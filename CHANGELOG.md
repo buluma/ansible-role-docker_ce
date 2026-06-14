@@ -1,11 +1,14 @@
 # Changelog
 
-## [Unreleased](https://github.com/buluma/ansible-role-docker_ce/tree/HEAD)
+## [26.6.0](https://github.com/buluma/ansible-role-docker_ce/tree/26.6.0) (2026-06-14)
 
-[Full Changelog](https://github.com/buluma/ansible-role-docker_ce/compare/24.3.31...HEAD)
+[Full Changelog](https://github.com/buluma/ansible-role-docker_ce/compare/24.3.31...26.6.0)
 
 **Merged pull requests:**
 
+- Bump ansible/ansible-lint from 26.2.0 to 26.3.0 [\#43](https://github.com/buluma/ansible-role-docker_ce/pull/43) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump ansible/ansible-lint from 26.1.1 to 26.2.0 [\#41](https://github.com/buluma/ansible-role-docker_ce/pull/41) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump actions/checkout from 4 to 6 [\#40](https://github.com/buluma/ansible-role-docker_ce/pull/40) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump buluma/molecule-action from 24.2.0 to 24.6.17 [\#35](https://github.com/buluma/ansible-role-docker_ce/pull/35) ([dependabot[bot]](https://github.com/apps/dependabot))
 
 ## [24.3.31](https://github.com/buluma/ansible-role-docker_ce/tree/24.3.31) (2024-03-26)
