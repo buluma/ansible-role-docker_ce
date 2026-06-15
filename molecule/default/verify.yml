@@ -13,10 +13,6 @@
       failed_when: docker_ce_group is changed
       name: Check docker group configuration
       register: docker_ce_group
-    - ansible.builtin.pip:
-        name: docker-py
-        state: present
-      name: Install pip docker-py
     - community.docker.docker_container:
         image: buluma/docker-centos-openssh
         name: openssh
